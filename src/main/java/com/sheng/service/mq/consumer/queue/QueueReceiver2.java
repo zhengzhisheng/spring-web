@@ -14,7 +14,7 @@ import javax.jms.TextMessage;
  * @description  队列消息监听器
  * 
  */
-@Component
+@Component("queueReceiver2")
 public class QueueReceiver2 implements MessageListener {
 
 	@Override

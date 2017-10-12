@@ -43,6 +43,10 @@
         <property name="pubSubDomain" value="true"/>
         <property name="deliveryMode" value="2"/>
     </bean>
+    <bean id="queueReceiver1" class="com.sheng.service.mq.consumer.queue.QueueReceiver1"/>
+    <bean id="queueReceiver2" class="com.sheng.service.mq.consumer.queue.QueueReceiver2"/>
+    <bean id="topicReceiver1" class="com.sheng.service.mq.consumer.topic.TopicReceiver1"/>
+    <bean id="topicReceiver2" class="com.sheng.service.mq.consumer.topic.TopicReceiver2"/>
 
     <!--Spring JmsTemplate 的消息生产者 end-->
 
