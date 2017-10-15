@@ -46,7 +46,7 @@ public class ShoppingCartTest {
         double total = cart.calculateTotal();
 
         System.out.println("Total price of items in shopping cart: $"+total);
-        assertEquals("Result",517.96, total,0);
+        assertEquals("Result",600, total,0);
     }
 
     @After

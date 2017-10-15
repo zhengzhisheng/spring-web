@@ -7,11 +7,7 @@ import lombok.Data;
  * <p>
  * Created by zhengzs on 2017/10/13.
  */
-@Data
-public class Store {
-    private double price;
+public interface Store {
 
-    public double getPrice(String name){
-        return 12;
-    }
+    public double getPrice(String name);
 }

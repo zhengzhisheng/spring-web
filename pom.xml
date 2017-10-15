@@ -28,6 +28,7 @@
         <lombok.version>1.16.8</lombok.version>
         <log4j2.version>2.8.2</log4j2.version>
         <junit.version>4.12</junit.version>
+        <hibernate-validator.version>5.3.5.Final</hibernate-validator.version>
     </properties>
 
     <dependencies>
@@ -140,6 +141,12 @@
             <artifactId>junit</artifactId>
             <version>${junit.version}</version>
             <scope>test</scope>
+        </dependency>
+        <!-- hibernate-validator -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>${hibernate-validator.version}</version>
         </dependency>
     </dependencies>
 
