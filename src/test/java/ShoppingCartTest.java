@@ -9,7 +9,7 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 /**
- * 测试
+ * 测试（mock）
  * <p>
  * Created by zhengzs on 2017/10/13.
  */

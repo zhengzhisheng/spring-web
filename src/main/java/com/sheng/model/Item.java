@@ -1,7 +1,7 @@
 package com.sheng.model;
 
 /**
- * 商品
+ * 商品(测试mock)
  * <p>
  * Created by zhengzs on 2017/10/13.
  */
