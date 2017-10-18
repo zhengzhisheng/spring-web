@@ -1,7 +1,7 @@
 package com.sheng.mapper;
 
 import com.baomidou.mybatisplus.mapper.BaseMapper;
-import com.wangzhixuan.model.Organization;
+import com.sheng.model.Organization;
 
 /**
  *
