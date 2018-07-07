@@ -15,7 +15,6 @@ import javax.jms.TextMessage;
 @Component("queueReceiver1")
 public class QueueReceiver1 implements MessageListener {
 
-    @Override
     public void onMessage(Message message) {
         try {
             System.out.println("QueueReceiver1接收到消息:" + ((TextMessage) message).getText());
