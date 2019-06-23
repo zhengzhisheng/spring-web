@@ -14,7 +14,7 @@ public class Thread0 extends Thread {
 
     public void run() {
         try {
-            deadLock.leftRight();
+//            deadLock.leftRight();
         } catch (Exception e) {
             e.printStackTrace();
         }

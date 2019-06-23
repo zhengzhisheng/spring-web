@@ -1,5 +1,4 @@
-import java.util.ArrayList;
-import java.util.List;
+import com.alibaba.fastjson.JSON;
 
 /**
  * 测试
@@ -8,12 +7,9 @@ import java.util.List;
  */
 public class Test {
     public static void main(String[] args) throws Exception {
-        try{
-            List aa = new ArrayList();
-            aa.subList(1,3);
-        }catch (Exception e){
-            throw new Exception(e.getMessage());
-        }
-        System.out.println("b");
+        ResponseResult responseResult = new ResponseResult();
+        responseResult = JSON.parseObject("\"isPushMsg\": 1",ResponseResult.class);
+
+        System.out.println(responseResult);
     }
 }
