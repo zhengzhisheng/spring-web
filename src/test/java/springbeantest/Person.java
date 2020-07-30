@@ -1,5 +1,8 @@
 package springbeantest;
 
+import com.alibaba.fastjson.JSONArray;
+import lombok.Data;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.BeanFactoryAware;
@@ -7,10 +10,14 @@ import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 
+import java.util.List;
+
 /**
  * @author zzs .
  * @since 2018/6/9
  */
+@Data
+@Slf4j
 public class Person implements BeanFactoryAware, BeanNameAware,
         InitializingBean, DisposableBean {
 
@@ -80,7 +87,13 @@ public class Person implements BeanFactoryAware, BeanNameAware,
                 .println("【InitializingBean接口】调用InitializingBean.afterPropertiesSet()");
     }
 
-    // 这是DiposibleBean接口方法
+    public static void main(String[] args) {
+        String aa = "[{\"indicator\":\"recipeDocName\",\"indicatorName\":\"医生\"},{\"indicator\":\"recipeTime\",\"indicatorName\":\"处方日期\"},{\"indicator\":\"deptName\",\"indicatorName\":\"科室\"},{\"indicator\":\"recipeDocTitle\",\"indicatorName\":\"医生职称\"},{\"indicator\":\"hospitalDiagName\",\"indicatorName\":\"诊断\"}]";
+        List<DtoIndicator> templateIndicators = JSONArray.parseArray(aa,DtoIndicator.class);
+        System.out.println(templateIndicators.toString());
+    }
+
+    // 这是DisposableBean接口方法
     @Override
     public void destroy() throws Exception {
         System.out.println("【DiposibleBean接口】调用DiposibleBean.destory()");

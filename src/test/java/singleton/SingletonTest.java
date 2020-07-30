@@ -11,7 +11,7 @@ public class SingletonTest {
     private SingletonTest(){
 
     }
-    private static class SingletonHolder {
+    private static final class SingletonHolder {
         private static final SingletonTest INSTANCE = new SingletonTest();
     }
 
