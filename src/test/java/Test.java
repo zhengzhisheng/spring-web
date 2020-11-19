@@ -1,6 +1,10 @@
 import com.alibaba.fastjson.JSON;
+import com.google.gson.*;
 import sun.jvm.hotspot.utilities.Interval;
 
+import java.lang.reflect.Type;
+import java.text.NumberFormat;
+import java.text.ParseException;
 import java.util.*;
 
 /**
@@ -46,5 +50,34 @@ public class Test {
         }
 
         return res_arr.toArray(new int[res_arr.size()][]);
+    }
+
+    public static void main(String[] args) throws ParseException {
+        ResponseResult object = new ResponseResult();
+        object.setIsPushMsg("1");
+        Gson gson = new GsonBuilder()
+                .registerTypeAdapter(Class.class, new ClassTypeAdapter())
+                .create();
+//        Gson gson = new Gson();
+        System.out.println(gson.toJson(object));
+    }
+
+    public static class ClassTypeAdapter implements JsonSerializer<Class<?>>, JsonDeserializer<Class<?>> {
+
+        @Override
+        public JsonElement serialize(Class<?> src, Type typeOfSrc, JsonSerializationContext context) {
+            return new JsonPrimitive(src.getName());
+        }
+
+        @Override
+        public Class<?> deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context)
+                throws JsonParseException {
+            try {
+                return Class.forName(json.getAsString());
+            } catch (ClassNotFoundException e) {
+                throw new RuntimeException(e);
+            }
+        }
+
     }
 }

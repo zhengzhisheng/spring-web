@@ -12,7 +12,7 @@ import java.util.concurrent.Future;
  * @author zzs .
  * @since 2019/5/25
  */
-public class ThreadPoll {
+public class ThreadPool {
 
     public static void main(String[] args) throws InterruptedException, ExecutionException {
         ExecutorService executor = Executors.newFixedThreadPool(2);
