@@ -14,7 +14,7 @@
         <commons-collections.version>3.2.1</commons-collections.version>
         <commons-beanutils.version>1.8.3</commons-beanutils.version>
         <lombok.version>1.16.18</lombok.version>
-        <log4j2.version>2.8.2</log4j2.version>
+        <log4j2.version>2.16.0</log4j2.version>
         <junit.version>4.12</junit.version>
         <mybaitsplus.version>2.0.8</mybaitsplus.version>
         <shiro.version>1.3.2</shiro.version>
