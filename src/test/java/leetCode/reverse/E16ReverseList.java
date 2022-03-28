@@ -34,7 +34,7 @@ public class E16ReverseList {
         forth.data = 4;
         E16ReverseList test = new E16ReverseList();
         ListNode result = test.ReverseList(head);
-        System.out.println(result.next.data);
+        System.out.println(result.data);
 
 
         ConcurrentHashMap concurrentHashMap = new ConcurrentHashMap();

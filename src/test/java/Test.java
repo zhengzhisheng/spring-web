@@ -1,4 +1,5 @@
 import com.alibaba.fastjson.JSON;
+import com.google.common.collect.Lists;
 import com.google.gson.*;
 import sun.jvm.hotspot.utilities.Interval;
 
@@ -53,13 +54,7 @@ public class Test {
     }
 
     public static void main(String[] args) throws ParseException {
-        ResponseResult object = new ResponseResult();
-        object.setIsPushMsg("1");
-        Gson gson = new GsonBuilder()
-                .registerTypeAdapter(Class.class, new ClassTypeAdapter())
-                .create();
-//        Gson gson = new Gson();
-        System.out.println(gson.toJson(object));
+        System.out.println(4%3);
     }
 
     public static class ClassTypeAdapter implements JsonSerializer<Class<?>>, JsonDeserializer<Class<?>> {
